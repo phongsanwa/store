@@ -141,8 +141,11 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'product_name' => [
+            'required' => 'Tên sản phẩm không được để trống!',
+        ],
+        'description' => [
+            'required' => 'Mô tả sản phẩm không được để trống!',
         ],
     ],
 

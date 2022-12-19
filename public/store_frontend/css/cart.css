@@ -1,0 +1,282 @@
+#layout_Cart .heading-cart.has-notify {
+    margin-bottom: 5px;
+}
+
+#layout_Cart .heading-cart {
+    font-size: 20px;
+    line-height: 35px;
+    color: #000;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+
+#cartformpage .o_cart_table {
+    background: #fff;
+}
+
+#cartformpage .o_cart_table .item:last-child {
+    border-bottom: none;
+}
+
+#cartformpage .o_cart_table .item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#cartformpage .o_cart_table .item .left {
+    display: inline-flex;
+    width: 15%;
+    padding: 0 10px;
+}
+
+#cartformpage .o_cart_table .item .left .item-img {
+    margin: 0 auto;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#cartformpage .o_cart_table .item .right {
+    display: inline-flex;
+    width: 85%;
+}
+
+#cartformpage .o_cart_table .item .right .item-info {
+    flex-wrap: wrap;
+    display: inline-flex;
+    width: 40%;
+    align-items: center;
+}
+
+#cartformpage .o_cart_table .item .right .item-info a {
+    text-decoration: none;
+    color: #000;
+}
+
+#cartformpage .o_cart_table .item .right .item-info a .item-desc {
+    font-size: 12px;
+    color: #777;
+    margin-top: 3px;
+}
+
+#cartformpage .o_cart_table .item .right .item-quan {
+    display: inline-flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cartformpage .o_cart_table .item .right .item-quan .cart_quality {
+    display: flex;
+}
+
+#cartformpage .o_cart_table .item .right .item-quan .cart_quality .fal.fa-minus {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#cartformpage .o_cart_table .item .right .item-quan .cart_quality input {
+    width: 40px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 0;
+    box-shadow: none;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    border-color: #e1e1e1;
+    color: #a73340;
+}
+
+#layout_Cart .list-pageform-cart .form-control {
+    box-shadow: none;
+    border-color: #dfe0e1;
+    border-radius: 0;
+}
+
+#cartformpage .o_cart_table .item .right .item-quan .cart_quality .fal.fa-plus {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#cartformpage .o_cart_table .item .right .item-quan .cart_quality .fal {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    color: #999;
+    cursor: pointer;
+    font-size: 8px;
+}
+
+#cartformpage .o_cart_table .item .right .item-price {
+    display: inline-flex;
+    width: 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cartformpage .o_cart_table .item .right .item-total-price {
+    display: inline-flex;
+    text-align: center;
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #a73340;
+}
+
+#cartformpage .o_cart_table .item .right .item-total-price .remove {
+    display: block;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 400;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+#cartformpage .o_cart_table .item .right .item-total-price div span {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    color: #777;
+}
+
+#layout_Cart .list-pageform-cart .cart-row {
+    background: #fafafa;
+    padding: 15px;
+}
+
+#layout_Cart .list-pageform-cart .note-block {
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+#layout_Cart .list-pageform-cart .note-label {
+    font-size: 20px;
+}
+
+#layout_Cart .list-pageform-cart .form-control {
+    box-shadow: none;
+    border-color: #dfe0e1;
+    border-radius: 0;
+}
+
+#layout_Cart .list-pageform-cart .policy_return h4 {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#layout_Cart .list-pageform-cart .policy_return li {
+    display: block;
+    line-height: 25px;
+    position: relative;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+#layout_Cart .list-pageform-cart .policy_return li:before {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: inherit;
+    content: "\f178";
+    font-size: 10px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    transition: all .4s ease-in-out 0s;
+    -webkit-transition: all .4s ease-in-out 0s;
+    -moz-transition: all .4s ease-in-out 0s;
+}
+
+#layout_Cart .continue {
+    display: block;
+    margin-top: 40px;
+    text-align: right;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #000;
+}
+
+#layout_Cart .order-summary-block {
+    border: 1px solid #dfe0e1;
+    padding: 15px 15px 30px;
+}
+
+#layout_Cart .order-summary-block .order-summary-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#layout_Cart .order-summary-block .summary-subtotal span {
+    font-weight: 700;
+    float: right;
+}
+
+#layout_Cart .order-summary-block .summary-total {
+    padding-bottom: 10px;
+    border-top: 1px dotted #dfe0e1;
+    padding-top: 15px;
+    font-weight: 700;
+}
+
+#layout_Cart .order-summary-block .summary-total p {
+    margin-bottom: 5px;
+}
+
+#layout_Cart .order-summary-block .summary-total:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#layout_Cart .order-summary-block .summary-action {
+    border-top: 1px dotted #dfe0e1;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#layout_Cart .order-summary-block .summary-action p {
+    font-size: 13px;
+    color: #777;
+    font-weight: 400;
+    text-align: left;
+}
+
+#layout_Cart .order-summary-block .summary-action .checkout-btn {
+    display: block;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 7px 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+#cartformpage .o_cart_table .item .right .item-total-price span.line-item-total {
+    font-weight: 700;
+    color: #a73340;
+}
+
+#cartformpage .o_cart_table .item .right .item-price .price_item {
+    font-size: 15px;
+    font-weight: 700;
+}
