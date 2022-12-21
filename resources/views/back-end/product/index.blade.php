@@ -189,10 +189,6 @@
 {{-- !-- Delete Warning Modal -->  --}}
 @section('scripts')
     <script src="{{ asset('store_backend/js/jquery-confirm.min.js') }}"></script>
-    <script>
-
-
-    </script>
 @endsection
 @stop
 

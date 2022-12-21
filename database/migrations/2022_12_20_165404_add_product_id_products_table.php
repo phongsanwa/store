@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
+        //phần này không tạo được nhưng tạo được trên php admin có thể chỉnh sửa lại trong php admin
         Schema::table('products', function (Blueprint $table) {
-            $table->bigInteger('parent_id');
+            $table->integer('product_id')->nullable()->unsigned();
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 

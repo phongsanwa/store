@@ -28,7 +28,7 @@ class ProductController extends Controller
      */
     public function create(){
         $categories = Category::all();
-        $product_child = Product::with('subProduct')->where('parent_id',0)->get();
+        $product_child = Product::all();
         return view('back-end.product.create',['categories'=>$categories,'product_child'=>$product_child]);
     }
     public function uploadImage(Request $request) {
@@ -53,7 +53,8 @@ class ProductController extends Controller
     public function edit($id){
         $product = Product::find($id);
         $categories = Category::all();
-        return view('back-end.product.edit',['product'=>$product,'categories'=>$categories]);
+        $product_child = Product::with('subProduct')->get();
+        return view('back-end.product.edit',['product'=>$product,'categories'=>$categories,'product_child'=>$product_child]);
     }
 
     public function update(Request $request,$id){
@@ -64,6 +65,7 @@ class ProductController extends Controller
         $data->content = $request->editor1;
         $data->price = $request->price;
         $data->cover_price = $request->cover_price;
+        $data->parent_id = $request->parent_id;
         $data->save();
         return redirect()->route('products.index')->with('success','Sửa sản phẩm thành công');
     }
@@ -94,6 +96,7 @@ class ProductController extends Controller
         $data->content = $request->editor1;
         $data->price = $request->price;
         $data->cover_price = $request->cover_price;
+        $data->parent_id = $request->parent_id;
         $data->save();
         return redirect()->route('products.index')
             ->with('success','Tạo sản phẩm thành công.');

@@ -11,6 +11,8 @@ use App\Http\Controllers\Backend\PermissionsController;
 use App\Http\Controllers\Backend\RolesController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\backend\AttributesController;
+use App\Http\Controllers\backend\ProductAttributesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,6 +44,7 @@ use App\Http\Controllers\backend\AttributesController;
         Route::post('upload_image', [ProductController::class, 'uploadImage'])->name('upload');
         Route::resource('categories', CategoryController::class);
         Route::resource('permissions', PermissionsController::class);
+        Route::resource('product_attributes', ProductAttributesController::class);
     });
     Route::group(['middleware' => ['auth', 'permission']], function() {
 

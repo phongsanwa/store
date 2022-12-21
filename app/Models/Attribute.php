@@ -32,4 +32,9 @@ class Attribute extends Model
     public function categories() {
         return $this->belongsToMany('App\Models\Category');
     }
+
+    public function attribute()
+    {
+        return $this->hasMany(ProductAttribute::class);
+    }
 }

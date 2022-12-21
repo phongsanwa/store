@@ -28,7 +28,7 @@ class ProductAttribute extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function attributes()
+    public function attribute()
     {
         return $this->belongsTo(Attribute::class);
     }

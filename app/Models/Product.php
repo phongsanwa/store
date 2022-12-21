@@ -37,7 +37,12 @@ class Product extends Model
     {
         return $this->hasMany(ProductAttribute::class);
     }
+
+    public function products(){
+        return $this->hasMany(Product::class);
+    }
+
     public function subProduct(){
-        return $this->hasMany('App\Models\Product','parent_id');
+        return $this->hasMany(Product::class)->with('products');
     }
 }

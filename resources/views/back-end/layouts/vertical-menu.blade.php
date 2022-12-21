@@ -25,6 +25,7 @@
                         <li><a href="{{ url('products') }}" key="t-products"><i data-feather="box"></i>Sản phẩm</a></li>
                         <li><a href="{{ url('categories') }}" data-key="t-product-detail"><i data-feather="menu"></i>Danh mục sản phẩm</a></li>
                         <li><a href="{{ route('attributes.index') }}" data-key="t-orders"><i data-feather="list"></i>Thuộc tính</a></li>
+                        <li><a href="{{ route('product_attributes.index') }}" data-key="t-orders"><i data-feather="list"></i>Gía trị thuộc tính</a></li>
                         <li><a href="ecommerce-customers.html" data-key="t-customers"><i data-feather="trash"></i>Thương hiệu</a></li>
                         <li><a href="ecommerce-cart.html" data-key="t-cart"><i data-feather="users"></i>Nhà cung cấp</a></li>
                     </ul>

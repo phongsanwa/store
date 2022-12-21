@@ -69,7 +69,7 @@
                                                 @enderror
                                             </div>
                                             <label>Sản phẩm cha</label>
-                                            <select class="form-select js-example-placeholder-single form-select-lg mb-3" id="parent_id" name="txtCode" aria-label="form-select-lg example">
+                                            <select class="form-select js-example-placeholder-single form-select-lg mb-3" id="parent_id" name="parent_id" aria-label="form-select-lg example">
                                                 <option selected value="0">Chọn sản phẩm cha</option>
                                                 @foreach($product_child as $c)
                                                     <option value="{{$c->id}}">{{$c->product_name}}</option>
@@ -80,7 +80,7 @@
                                                     @endif
                                                 @endforeach
                                             </select>
-                                            <div class="mb-3">
+                                            <div class="mb-3 mt-3">
                                                 <label for="manufacturername">Mô tả ngắn </label>
                                                 <input id="description" name="description" type="text" class="form-control">
                                             </div>
