@@ -6,7 +6,7 @@
     <link href="{{asset('store_backend/css/jquery-confirm.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
 @endsection
 
-@section('content')
+@section('content') 
     <div class="page-content">
         <div class="container-fluid">
             <!-- start page title -->

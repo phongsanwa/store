@@ -41,10 +41,11 @@ use App\Http\Controllers\backend\ProductAttributesController;
         Route::get('home/dashboard', [IndexController::class, 'home']);
         Route::get('product/create', [ProductController::class, 'create'])->name('product.create');
         Route::resource('products', ProductController::class);
-        Route::post('upload_image', [ProductController::class, 'uploadImage'])->name('upload');
+//        Route::post('products/upload_image', [ProductController::class, 'uploadMultiImage'])->name('products.uploadMultiImage');
         Route::resource('categories', CategoryController::class);
         Route::resource('permissions', PermissionsController::class);
         Route::resource('product_attributes', ProductAttributesController::class);
+        Route::get('search',[ProductAttributesController::class,'searchByName'])->name('attribute.productName');
     });
     Route::group(['middleware' => ['auth', 'permission']], function() {
 

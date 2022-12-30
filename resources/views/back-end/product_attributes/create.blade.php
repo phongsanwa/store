@@ -4,7 +4,35 @@
     <link href="{{asset('store_backend/css/select2.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
     <link href="{{asset('store_backend/css/dropzone.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
 @endsection
-
+@section('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.10/jquery.autocomplete.min.js"></script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF_TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $(function () {
+            $("#product_name").autocomplete({
+                serviceUrl: '/search',
+                paramName: "product_name",
+                onSelect: function (suggestion) {
+                    $("#product_name").val(suggestion.value);
+                },
+                transformResult: function (response) {
+                    return {
+                        suggestions: $.map($.parseJSON(response), function (item) {
+                            console.log(item);
+                            return {
+                                value: item.product_name,
+                            };
+                        })
+                    };
+                },
+            });
+        });
+    </script>
+@endsection
 @section('content')
     <div class="page-content category-create">
         <div class="container-fluid">
@@ -86,11 +114,22 @@
                                 <div class="mb-3">
                                     <div class="form-group">
                                         <label class="control-label" for="product_name">Category Variant Name</label>
-                                        <select name="product_name" id="product_name" class="form-control">
-                                            @foreach($product as $label)
-                                                <option value="{{ $label->id }}">{{ $label->product_name }}</option>
-                                            @endforeach
-                                        </select>
+                                        <input
+                                            class="form-control"
+                                            type="text"
+                                            placeholder="Nhập tên sản phẩm"
+                                            id="product_name"
+                                            name="product_name"
+                                            value="{{ old('product_name') }}"
+                                        />
+                                        @if ($errors->has('product_name'))
+                                            <span class="text-danger text-left">{{ $errors->first('product_name') }}</span>
+                                        @endif
+{{--                                        <select name="product_name" id="product_name" class="form-control">--}}
+{{--                                            @foreach($product as $label)--}}
+{{--                                                <option value="{{ $label->id }}">{{ $label->product_name }}</option>--}}
+{{--                                            @endforeach--}}
+{{--                                        </select>--}}
                                     </div>
                                 </div>
 

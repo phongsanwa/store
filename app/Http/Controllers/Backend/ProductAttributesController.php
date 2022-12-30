@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use App\Models\ProductAttribute;
 use App\Models\Attribute;
 use App\Models\Product;
@@ -53,6 +54,15 @@ class ProductAttributesController extends Controller
         return redirect()->route('product_attributes.index')->with('success','Bạn đã thêm tên thuộc tính thành công');
     }
 
+    public function searchByName(Request $request){
+        $keyword = $request->get('product_name');
+//        $name = DB::table('product_attributes')
+//                    ->join('products', 'product_attributes.product_id', '=', 'products.id')
+//                    ->where('products.product_name', 'LIKE', "%$keyword%")
+//                    ->get();
+        $name = Product::select('product_name')->where('product_name', 'LIKE', "%$keyword%")->get();
+        return response()->json($name);
+    }
     /**
      * Display the specified resource.
      *
